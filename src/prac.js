@@ -17,6 +17,12 @@ const copy = () => {
   return (
     <div className='p-4'>
       <button className='bg-black rounded-lg text-white mb-3 px-2 py-2' onClick={greet}> Click Me </button>
+
+      <div className="sv h-[200px] w-[200px] border-2 border-black">
+        <svg viewBox='0 0 200 200'>
+          <circle r={50} cx={100} cy={100} fill='red'/>
+        </svg>
+      </div>
       
 <h1 className='bg-[purple] text-white text-[20px]'>Hello Jee</h1>
 
