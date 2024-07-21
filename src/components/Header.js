@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaBarsStaggered } from "react-icons/fa6";
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -9,8 +10,10 @@ const Header = () => {
 
       <FaBarsStaggered className='hidden sm:flex'/>
       <nav className='sm:hidden'>
-        <a href="" className='hover:bg-white hover:text-black px-2 py-2'>About</a>
-        <a href="" className='hover:bg-white hover:text-black px-2 py-2'>Contact</a>
+
+        <NavLink to='/about-page' className='hover:bg-white hover:text-black px-2 py-2'>About</NavLink>
+        <NavLink to= '/contact-page' className='hover:bg-white hover:text-black px-2 py-2'>Contact</NavLink>
+        
       </nav>
     </header>
   )
