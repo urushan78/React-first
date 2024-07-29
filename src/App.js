@@ -5,31 +5,34 @@ import Contact from './pages/Contact';
 import About from './pages/About';
 import Page1 from './pages/sub-pages/Page1';
 import Page2 from './pages/sub-pages/Page2';
+import RootLayout from './components/RootLayout';
+import DetailPage from './pages/DetailPage';
 
 const App = () => {
   const router = createBrowserRouter([
 {
   path: '/',
-  element: <Home/>,
+  element: <RootLayout/>,
   children: [
     {
       index: true,
-      element: <Page1/>
+      element: <Home/>,
     },
     {
-      path: 'page2',
-      element: <Page2/>
+      path: 'detail/:id',
+      element: <DetailPage/>
     },
+    {
+      path: 'contact-page',
+      element: <Contact/>
+    },
+    {
+      path: 'about-page',
+      element: <About/>
+    }
   ]
 },
-{
-  path: 'contact-page',
-  element: <Contact/>
-},
-{
-  path: 'about-page',
-  element: <About/>
-}
+
   ]);
   
   return <RouterProvider router={router} />
